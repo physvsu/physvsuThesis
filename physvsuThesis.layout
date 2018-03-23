@@ -1,0 +1,81 @@
+# % Do not delete the line below; configure depends on this.
+# \DeclareLaTeXClass[physvsuThesis]{Voronezh State University Thesis in Physics}
+# \DeclareCategory{Thesis}
+
+Format 60
+Input article.layout
+
+Style "ВКР: Выполнил"
+    LatexType     Command
+    LatexName     physvsuInfoStudent
+    LabelString   "Выполнил:"
+    
+    Category      "ВКР"
+    KeepEmpty     1
+    InPreamble    1
+    NeedProtect   1
+    Newline       0
+    Align         Block
+    LabelType     Static
+    LabelSep      M
+    LeftMargin    MMMMMMMMMMMMMMMM
+    LabelFont
+        Color     teal
+        Family    Sans
+    EndFont
+End
+
+Style "ВКР: Руководитель"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoSupervisor
+    LabelString   "Руководитель:"
+End
+
+Style "ВКР: Заведующий кафедрой"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoChair
+    LabelString   "Заведующий кафедрой:"
+End
+
+Style "ВКР: Место защиты"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoCity
+    LabelString   "Место защиты:"
+End
+
+Style "ВКР: Год защиты"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoYear
+    LabelString   "Год защиты:"
+End
+
+Style "ВКР: Тип документа"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoThesisType
+    LabelString   "Тип документа:"
+End
+
+Style "ВКР: Факультет"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoFaculty
+    LabelString   "Факультет:"
+End
+
+Style "ВКР: Кафедра"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoDepartment
+    LabelString   "Кафедра:"
+End
+
+Style "ВКР: Статус допуска"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoAllowedBy
+    LabelString   "Статус допуска:"
+End
+
+Style "ВКР: Шапка титульника"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoBoilerplate
+    LabelString   "Шапка титульника:"
+    Newline       1
+End
