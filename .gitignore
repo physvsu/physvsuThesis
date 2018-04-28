@@ -1,0 +1,5 @@
+# Latex temporary files.
+*.aux
+*.log
+*.toc
+
