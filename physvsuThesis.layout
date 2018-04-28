@@ -67,6 +67,36 @@ Style "ВКР: Кафедра"
     LabelString   "Кафедра:"
 End
 
+Style "ВКР: УДК"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoUDC
+    LabelString   "УДК:"
+End
+
+Style "ВКР: Код направления"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoFieldCode
+    LabelString   "Код направления:"
+End
+
+Style "ВКР: Название направления"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoFieldName
+    LabelString   "Название направления:"
+End
+
+Style "ВКР: Специализация"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoSpecialization
+    LabelString   "Специализация:"
+End
+
+Style "ВКР: Ключевые слова"
+    CopyStyle     "ВКР: Выполнил"
+    LatexName     physvsuInfoKeywords
+    LabelString   "Ключевые слова:"
+End
+
 Style "ВКР: Статус допуска"
     CopyStyle     "ВКР: Выполнил"
     LatexName     physvsuInfoAllowedBy
