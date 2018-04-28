@@ -36,7 +36,7 @@
 \RequirePackage{geometry}
 \geometry{
   left=3.0cm,
-  right=2.0cm,
+  right=1.5cm,
   top=2.0cm,
   bottom=2.3cm,
   footskip=1.0cm
@@ -113,9 +113,9 @@
     \newcommand\@signline[2]{
       \parbox[t]{3.5cm}{##1}~$\underset{\text{\tiny\it подпись}}{\underline{\hspace{3cm}}}$~\parbox[t]{8cm}{##2}\par
     }
-    \@signline{\physvsu@strStudent:}{\physvsu@InfoStudent}
-    \@signline{\physvsu@strSupervisor:}{\physvsu@InfoSupervisor}
-    \@signline{\physvsu@strChair:}{\physvsu@InfoChair}
+    \@signline{Студент:}{\physvsu@InfoStudent}
+    \@signline{Руководитель:}{\physvsu@InfoSupervisor}
+    \@signline{Зав.\,кафедрой:}{\physvsu@InfoChair}
   \endgroup
   \vfill
   \parbox[t]{\linewidth}{\centering \physvsu@InfoCity{} – \physvsu@InfoYear}

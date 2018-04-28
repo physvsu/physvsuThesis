@@ -1,0 +1,4171 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../../physvsuThesis
+\begin_preamble
+\usepackage{icomma}
+\usepackage{calc}
+\usepackage[section]{placeins}
+\usepackage{microtype}
+
+\allowdisplaybreaks
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\begin_local_layout
+Format 60
+Style "ВКР: Список без маркеров"
+    Category              List
+    Margin                Manual
+    LatexType             Item_Environment
+    LatexName             itemize
+    NextNoindent          1
+    LabelSep              xxx
+    ParSkip               0
+    TopSep                0
+    BottomSep             0
+    ParSep                0
+    Align                 Block
+    AlignPossible         Block
+    LabelType             Static
+    LabelString           "⋅"
+
+End
+\end_local_layout
+\language russian
+\language_package none
+\inputencoding default
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf5
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 0 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Этот файл — пример оформления дипломной работы (в данном случае, бакалаврской)
+ с использованием связки LyX+LaTeX и стилевого файла physvsuThesis.cls, разработа
+нного специально для физического факультета ВГУ.
+ Причём пример не синтетический: содержание этого файла — реальная дипломная
+ работа Никиты Нагорного (публикуется с его разрешения).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Программная реализация метода конечных разностей во временной области для
+ графических процессоров с использованием технологии
+\begin_inset space ~
+\end_inset
+
+OpenCL
+\end_layout
+
+\begin_layout ВКР: Тип документа
+Бакалаврская работа
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Обратите внимание на расстановку тонких шпаций между инициалами и фамилией,
+ а также на неразрывный дефис в сокращении «д.ф.\SpecialChar nobreakdash
+м.н.».
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ВКР: Выполнил
+Н.
+\begin_inset space \thinspace{}
+\end_inset
+
+А.
+\begin_inset space \thinspace{}
+\end_inset
+
+Нагорный
+\end_layout
+
+\begin_layout ВКР: Руководитель
+П.
+\begin_inset space \thinspace{}
+\end_inset
+
+А.
+\begin_inset space \thinspace{}
+\end_inset
+
+Кретов
+\end_layout
+
+\begin_layout ВКР: Заведующий кафедрой
+А.
+\begin_inset space \thinspace{}
+\end_inset
+
+М.
+\begin_inset space \thinspace{}
+\end_inset
+
+Бобрешов, д.ф.\SpecialChar nobreakdash
+м.н., профессор
+\end_layout
+
+\begin_layout ВКР: Факультет
+Физический факультет
+\end_layout
+
+\begin_layout ВКР: Кафедра
+Кафедра электроники
+\end_layout
+
+\begin_layout ВКР: Шапка титульника
+Министерство образования и науки Российской Федерации
+\begin_inset Newline linebreak
+\end_inset
+
+Федеральное государственное бюджетное образовательное
+\begin_inset Newline linebreak
+\end_inset
+
+учреждение высшего образования
+\begin_inset Newline linebreak
+\end_inset
+
+«Воронежский государственный университет»
+\end_layout
+
+\begin_layout ВКР: Место защиты
+Воронеж
+\end_layout
+
+\begin_layout ВКР: Год защиты
+2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ВКР: УДК
+621.396.67
+\end_layout
+
+\begin_layout ВКР: Код направления
+03.03.03
+\end_layout
+
+\begin_layout ВКР: Название направления
+Радиофизика
+\end_layout
+
+\begin_layout ВКР: Специализация
+Специализация «Информационные системы и технологии»
+\end_layout
+
+\begin_layout ВКР: Ключевые слова
+метод конечных разностей во временной области; вычисления общего назначения
+ на графических картах; симметричный вибратор
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Аннотация требуется только для дипломных работ и будет автоматически помещена
+ на отдельном листе и преобразована в реферат диплома.
+ Для корректного формирования листа реферата необходимо также указать поля
+ «УДК» и «Ключевые слова».
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Работа посвящена разработке программного обеспечения для моделирования электроди
+намических процессов при помощи метода конечных разностей во временной области
+ (FDTD) с использованием технологии OpenCL для выполнения расчётов на графически
+х картах.
+ Были реализованы базовый алгоритм FDTD, сосредоточенный резистивный источник
+ напраяжения и граничные условия типа «идеально согласованный слой» (PML).
+ Было произведено тестовое моделирование распространения гармонического
+ сигнала, излучаемого тонким симметричным вибратором в замкнутом счётном
+ объёме, а также произведено сравнение производительности расчётов.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Одна из самых удобных возможностей LaTeX — возможность определять собственные
+ команды и обозначения.
+ В LyX это тоже есть.
+ Ниже приведён пример создания двух простых нестандартных команд 
+\backslash
+Rot и 
+\backslash
+Div — по какой-то причине в LaTeX нет стандартных команд для операторов
+ ротора и дивергенции, так что восполним этот недостаток.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Rot}{\operatorname{rot}}
+{\text{rot }}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Div}{\operatorname{div}}
+{\text{div }}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Кроме того, собственные команды могут содержать параметры и вообще быть
+ довольно сложными.
+ Так, Никита определил собственную команду для набора частной производной,
+ а также несколько команд для более удобной вёрстки полей, подвергнутой
+ дискретизации в соответствие со схемой Йе.
+ При этом команда 
+\backslash
+Yee даёт более высокую вертикальную черту, чем 
+\backslash
+yee.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\parder}[2]{\frac{\partial#1}{\partial#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\yee}[3]{\left.#1\right|_{#3}^{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Yee}[3]{#1\Big|_{#3}^{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+А вот более сложный пример.
+ При использовании команды 
+\backslash
+Yee часто возникает ситуация, когда за ней следует знак плюс или минус и
+ по центру строки возникает много свободного места, которое можно было бы
+ уменьшить, «свесив» пределы .......
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+hanglimitsoperator}[4][c]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+text{
+\backslash
+makebox[
+\backslash
+widthof{$#2$}][#1]{ $#2^{#3}_{#4}$ }}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fyee}[3]{\hanglimitsoperator[l]{\left.#1\right|}{#2}{#3}~~~}
+{\left.#1\right|_{#3}^{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fYee}[3]{\hanglimitsoperator[l]{#1\Big|}{#2}{#3}~~~}
+{#1\Big|_{#3}^{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Введение
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Метод конечных разностей во временной области
+\emph default
+ (англ.
+\begin_inset space ~
+\end_inset
+
+
+\emph on
+Finite Difference Time Domain
+\emph default
+, 
+\emph on
+FDTD
+\emph default
+) является одним из самых популярных и часто используемых на практике методов
+ вычислительной электродинамики: он позволяет исследовать поведение системы
+ сразу на широком диапазоне частот и обладает высоким потенциалом для параллелиз
+ации.
+ Последнее обстоятельство делает особенно предпочтительным для проведения
+ FDTD-симуляции использование не традиционных микропроцессоров с последовательно
+й архитектурой, а специализированных высокопараллельных вычислительных устройств.
+ Одними из наиболее доступных устройств такого рода являются 
+\emph on
+графические процессорные устройства
+\emph default
+ (
+\emph on
+ГПУ
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Большинство доступных на рынке пакетов программ для электромагнитной симуляции
+ включают в себя высокопроизводительные реализации FDTD как для 
+\emph on
+центральных процессорных устройств
+\emph default
+
+\begin_inset space ~
+\end_inset
+
+(
+\emph on
+ЦПУ
+\emph default
+), так и для видеопроцессоров, однако имеющиеся проекты с открытым исходным
+ кодом поддержки ГПУ не имеют.
+ Проприетарные реализации часто недоступны из-за высокой стоимости соответствующ
+их программных пакетов.
+ Кроме того, применение закрытого программного обеспечения затрудняет изучение
+ и непосредственную модификацию самого метода.
+ Ввиду вышеперечисленных факторов достаточно актуальной задачей является
+ разработка свободной реализации метода, эффективно использующей ресурсы
+ ГПУ для выполнения симуляции.
+\end_layout
+
+\begin_layout Standard
+В рамках данной работы была разработана программа, реализующая метод конечных
+ разностей во временной области, способная эффективно использовать ресурсы
+ ГПУ и позволяющая симулировать возбуждение электромагнитных колебаний при
+ помощи точечных источников тока и напряжения.
+ При помощи этой программы была произведена тестовая симуляция распространения
+ гармонического сигнала, излучаемого тонким симметричным вибратором в замкнутом
+ счётном объёме.
+ Помимо этого, была разработана референсная ЦПУ-реализация, также было произведе
+но сравнение производительности расчётов с использованием ЦПУ и ГПУ.
+\end_layout
+
+\begin_layout Section
+Метод конечных разностей во временной области
+\end_layout
+
+\begin_layout Standard
+Метод конечных разностей во временной области относится к общему классу
+ сеточных методов решения дифференциальных уравнений.
+ В его рамках уравнения Максвелла подвергаются дискретизации с использованием
+ центрально-разностной аппроксимации как по временной, так и по пространственным
+ координатам.
+ Полученные конечно-разностные уравнения решаются программными или аппаратными
+ средствами в каждой точке временной сетки, причём компоненты вектора напряжённо
+сти магнитного поля смещены на половину шага дискретизации относительно
+ компонент вектора напряженности электрического поля вдоль каждой оси.
+ Расчёт полей в ячейках сетки повторяется до тех пор, пока не будет получено
+ решение поставленной задачи в интересующем промежутке времени.
+\end_layout
+
+\begin_layout Standard
+Существует также большое количество расширений метода, наиболее популярными
+ из которых являются разнообразные поглощающие и отражающие граничные условия,
+ преобразование ближнего поля в дальнее, моделирование сосредоточенных активных
+ и пассивных элементов.
+ В рамках данной работы были реализованы только базовый алгоритм метода,
+ сосредоточенные источник тока и резистивный источник напряжения, а также
+ поглощающие граничные условия PML.
+\end_layout
+
+\begin_layout Subsection
+Краткое описание метода
+\end_layout
+
+\begin_layout Standard
+Рассмотрим систему из четырёх векторных уравнений Максвелла, записанных
+ в системе единиц СИ: 
+\begin_inset Formula 
+\begin{align}
+\Rot\vec{E} & =\sigma^{*}\vec{H}-\parder{\vec{B}}t,\nonumber \\
+\Rot\vec{H} & =\sigma\vec{E}+\parder{\vec{D}}t,\label{eq:MaxwellEquations}\\
+\Div\vec{D} & =\rho,\nonumber \\
+\Div\vec{B} & =0.\nonumber 
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В системе
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MaxwellEquations"
+
+\end_inset
+
+ использованы следующие обозначения:
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ — напряжённость электрического поля,
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ — напряжённость магнитного поля,
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ — магнитная индукция (
+\begin_inset Formula $\vec{B}=\mu\mu_{0}\vec{H}$
+\end_inset
+
+),
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\vec{D}$
+\end_inset
+
+ — электрическая индукция (
+\begin_inset Formula $\vec{D}=\varepsilon\varepsilon_{0}\vec{E}$
+\end_inset
+
+), 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ — относительная диэлектрическая проницаемость, 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\mu$
+\end_inset
+
+ — относительная магнитная проницаемость, 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\sigma$
+\end_inset
+
+ — удельная электрическая проводимость, 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\sigma^{*}$
+\end_inset
+
+ — удельная магнитная проводимость, 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\rho$
+\end_inset
+
+ — плотность стороннего электрического заряда, 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\varepsilon_{0}$
+\end_inset
+
+ — электрическая постоянная (
+\begin_inset Formula $\varepsilon_{0}\approx8,8542~\text{\text{Ф}/\text{м}}$
+\end_inset
+
+), 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Обратите внимание, что единица измерения помещена в блок 
+\backslash
+text внутри формулы и отбита от цифры пробелом.
+ Кроме того, дробная часть отделяется от целой запятой, а не точкой.
+ Рекомендуется дополнительно подключить пакет icomma, чтобы не мучиться
+ с несимметричными отступами у запятой.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\mu_{0}$
+\end_inset
+
+ — магнитная постоянная (
+\begin_inset Formula $\mu_{0}=4\pi\cdot10^{-7}~\text{\text{Гн}/\text{м}}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Рассматривая уравнения Максвелла, можно заметить, что изменение значения
+ вектора индукции электрического поля во времени (частная производная вектора
+ 
+\begin_inset Formula $\vec{D}$
+\end_inset
+
+ по времени) зависит от изменения магнитного поля в пространстве (ротор
+ вектора 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+).
+ Поэтому значение вектора электрического поля в каждой точке пространства
+ в определённый момент времени будет зависеть от значения этого же вектора
+ в предыдущий момент времени и от изменения распределения вектора напряжённости
+ магнитного поля в пространстве.
+ Аналогичным образом значение вектора 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ в определённой точке и в определённый момент времени зависит от своего
+ значения в предыдущий момент времени и от изменения распределения вектора
+ 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ в пространстве.
+\end_layout
+
+\begin_layout Standard
+Исходя из этих требований, на время выполнения каждой итерации алгоритма
+ нам необходимо хранить в памяти компьютера значения векторов 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ и 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ в предыдущий момент времени.
+ Под 
+\emph on
+итерацией
+\emph default
+ здесь и далее подразумевается расчёт значения вектора 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ или 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ в определённой точке в определённый момент времени.
+\end_layout
+
+\begin_layout Standard
+Расчёт трёхмерных электромагнитных структур сильно усложняет вычисление
+ ротора полей.
+ В связи с этим американским математиком китайского происхождения Кейном
+ И была разработана схема расчёта
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yee"
+
+\end_inset
+
+, в которой электрическая и магнитная сетки сдвинуты относительно друг друга
+ так, что магнитное поле по каждой оси рассчитывается в точках, расположенных
+ ровно между точками, в которых рассчитывается электрическое поле, и наоборот.
+ Эта схема сейчас известна как 
+\emph on
+сетка И
+\emph default
+.
+ Её графическая модель представлена на рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:YeeGrid"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Это пример вставки простого рисунка...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image1.png
+	lyxscale 50
+	width 90text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Поля в ячейке сетки И.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:YeeGrid"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Так как существующие вычислительные мощности не позволяют организовать расчёт
+ бесконечной сетки, на практике для численного решения какой-либо задачи
+ электродинамики задают ограниченный счётный объём.
+ 
+\emph on
+Счётный объём
+\emph default
+ (или 
+\emph on
+счётная область
+\emph default
+) — это та область пространства, в пределах которой выполняется численное
+ моделирование, то есть осуществляется непосредственный расчёт электромагнитных
+ полей.
+\end_layout
+
+\begin_layout Standard
+Счётная область разбивается на ячейки при помощи сетки И; в каждом узле
+ сетки задаются значения электрических и магнитных проницаемостей и проводимосте
+й.
+ Чаще всего в качестве базового материала счётного объёма рассматривают
+ вакуум (или воздух), в отдельных узлах сетки помещаются металлические или
+ диэлектрические структуры.
+ Тем не менее, алгоритм вполне позволяет задать произвольные значения вышеперечи
+сленных величин для каждой точки объёма.
+\end_layout
+
+\begin_layout Standard
+Кроме того, для моделирования реальных задач необходимы источники поля:
+ некоторая структура, способная создавать электромагнитное возмущение внутри
+ счётного объёма.
+ Так, среди прочего, метод конечных разностей во временной области позволяет
+ симулировать возбуждение электромагнитных колебаний при помощи падающей
+ электромагнитной волны либо точечного источника напряжения или тока.
+\end_layout
+
+\begin_layout Standard
+Отличительной особенностью метода конечных разностей во временной области
+ является его относительная простота.
+ К достоинствам метода также можно отнести возможность создавать анимированные
+ изображения распространения волновых процессов в счётном объеме, что может
+ быть очень полезно для понимания происходящих в модели процессов и позволяет
+ удостовериться в её корректности.
+\end_layout
+
+\begin_layout Standard
+Основной недостаток метода — обязательность разбиения счётного объёма на
+ ячейки сетки И, причём величина шага дискретизации по пространственным
+ координатам должна быть достаточно малой по сравнению с наименьшей длиной
+ волны, встречающейся в конкретной задаче.
+ Кроме того, эта величина ограничивает детализацию распределения материалов
+ в пространстве, поэтому может оказаться, что счётный объём должен быть
+ разделен на очень большое число ячеек, что влечёт за собой большие затраты
+ памяти и увеличивает время моделирования.
+\end_layout
+
+\begin_layout Standard
+Ещё одним недостатком метода конечных разностей во временной области является
+ обязательность вычисления параметров поля в каждой точке счётного объёма.
+ Так, при необходимости найти поле на некотором отдалении от источника придётся
+ производить расчёт во всех точках, что находятся между источником и интересующе
+й точкой.
+\end_layout
+
+\begin_layout Standard
+К тому же, счётная область обязательно должна быть конечной.
+ В большинстве случаев это достигается использованием искусственных граничных
+ условий, но они, как правило, вызывают дополнительные искажения.
+\end_layout
+
+\begin_layout Subsection
+Базовые уравнения
+\end_layout
+
+\begin_layout Standard
+Как уже было сказано, метод конечных разностей во временной области предполагает
+ введение сетки, которая в простейшем случае представляет собой обыкновенный
+ трёхмерный массив, в котором хранятся векторы полей и пространственная
+ структура.
+ Процедура расчёта заключается в поочерёдном обращении ко всем элементам
+ этого массива в порядке возрастания индексов и последующем перевычислении
+ его элементов с помощью базового алгоритма метода.
+\end_layout
+
+\begin_layout Standard
+Для получения из дифференциальных уравнений Максвелла рассчитываемых численно
+ выражений используется конечно-разностная схема, приведённая в работе
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schneider"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Выражения для компонент магнитного поля: 
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:BaseFdtdEquations"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+\Yee{H_{x}}{n+1/2}{i,j,k} & =\Yee{H_{x}}{n-1/2}{i,j,k}-\frac{\frac{\Delta t}{\mu}}{1+\frac{\sigma^{*}\Delta t}{2\mu}}\left[\frac{\yee{E_{z}}n{i,j+1,k}-\yee{E_{z}}n{i,j,k}}{\Delta y}-\frac{\yee{E_{y}}n{i,j,k+1}-\yee{E_{y}}n{i,j,k}}{\Delta z}\right],\\
+\Yee{H_{y}}{n+1/2}{i,j,k} & =\Yee{H_{y}}{n-1/2}{i,j,k}-\frac{\frac{\Delta t}{\mu}}{1+\frac{\sigma^{*}\Delta t}{2\mu}}\left[\frac{\yee{E_{x}}n{i,j,k+1}-\yee{E_{x}}n{i,j,k}}{\Delta z}-\frac{\yee{E_{z}}n{i+1,j,k}-\yee{E_{z}}n{i,j,k}}{\Delta x}\right],\\
+\Yee{H_{z}}{n+1/2}{i,j,k} & =\Yee{H_{z}}{n-1/2}{i,j,k}-\frac{\frac{\Delta t}{\mu}}{1+\frac{\sigma^{*}\Delta t}{2\mu}}\left[\frac{\yee{E_{y}}n{i+1,j,k}-\yee{E_{y}}n{i,j,k}}{\Delta x}-\frac{\yee{E_{x}}n{i,j+1,k}-\yee{E_{x}}n{i,j,k}}{\Delta y}\right].
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Выражения для компонент электрического поля: 
+\begin_inset Formula 
+\begin{align*}
+\fYee{E_{x}}{n+1}{i,j,k} & =\frac{1-\frac{\sigma\Delta t}{2\varepsilon}}{1+\frac{\sigma\Delta t}{2\varepsilon}}\fYee{E_{x}}n{i,j,k}+\frac{\frac{\Delta t}{\varepsilon}}{1+\frac{\sigma\Delta t}{2\varepsilon}}\left[\frac{\yee{H_{z}}{n+1/2}{i,j,k}-\yee{H_{z}}{n+1/2}{i,j-1,k}}{\Delta y}-\frac{\yee{H_{y}}{n+1/2}{i,j,k}-\yee{H_{y}}{n+1/2}{i,j,k-1}}{\Delta z}\right],\\
+\fYee{E_{y}}{n+1}{i,j,k} & =\frac{1-\frac{\sigma\Delta t}{2\varepsilon}}{1+\frac{\sigma\Delta t}{2\varepsilon}}\fYee{E_{y}}n{i,j,k}+\frac{\frac{\Delta t}{\varepsilon}}{1+\frac{\sigma\Delta t}{2\varepsilon}}\left[\frac{\yee{H_{x}}{n+1/2}{i,j,k}-\yee{H_{x}}{n+1/2}{i,j,k-1}}{\Delta z}-\frac{\yee{H_{z}}{n+1/2}{i,j,k}-\yee{H_{z}}{n+1/2}{i-1,j,k}}{\Delta x}\right],\\
+\fYee{E_{z}}{n+1}{i,j,k} & =\frac{1-\frac{\sigma\Delta t}{2\varepsilon}}{1+\frac{\sigma\Delta t}{2\varepsilon}}\fYee{E_{z}}n{i,j,k}+\frac{\frac{\Delta t}{\varepsilon}}{1+\frac{\sigma\Delta t}{2\varepsilon}}\left[\frac{\yee{H_{y}}{n+1/2}{i,j,k}-\yee{H_{y}}{n+1/2}{i-1,j,k}}{\Delta x}-\frac{\yee{H_{x}}{n+1/2}{i,j,k}-\yee{H_{x}}{n+1/2}{i,j-1,k}}{\Delta y}\right].
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Выше приведены формулы, позволяющие вычислить каждую из компонент векторов
+ напряжённости электрического и магнитного полей.
+ В этих формулах используются следующие обозначения:
+\end_layout
+
+\begin_layout ВКР: Список без маркеров
+\labelwidthstring ⋅
+\begin_inset Formula $\sigma$
+\end_inset
+
+ — удельная электрическая проводимость материала в ячейке сетки; 
+\end_layout
+
+\begin_layout ВКР: Список без маркеров
+\labelwidthstring ⋅
+\begin_inset Formula $\sigma^{*}$
+\end_inset
+
+ — удельная магнитная проводимость материала в ячейке сетки; 
+\end_layout
+
+\begin_layout ВКР: Список без маркеров
+\labelwidthstring ⋅
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ — абсолютная диэлектрическая проницаемость материала; 
+\end_layout
+
+\begin_layout ВКР: Список без маркеров
+\labelwidthstring ⋅
+\begin_inset Formula $\mu$
+\end_inset
+
+ — абсолютная магнитная проницаемость материала; 
+\end_layout
+
+\begin_layout ВКР: Список без маркеров
+\labelwidthstring ⋅
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ — шаг дискретизации по времени; 
+\end_layout
+
+\begin_layout ВКР: Список без маркеров
+\labelwidthstring ⋅
+\begin_inset Formula $\Delta x$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta y$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta z$
+\end_inset
+
+ — шаги дискретизации по пространственным координатам.
+ 
+\end_layout
+
+\begin_layout Standard
+Необходимо заметить, что величина 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ определяет частотные характеристики метода: наивысшая частота в спектре
+ сигналов, распространение которых моделируется, не должна превышать 
+\begin_inset Formula $f_{\text{max}}=\frac{1}{\Delta t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Также величина 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ должна удовлетворять условию Куранта: 
+\begin_inset Formula 
+\[
+\Delta t<\frac{1}{c\sqrt{\frac{1}{\Delta x^{2}}+\frac{1}{\Delta y^{2}}+\frac{1}{\Delta z^{2}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пересчёт значений компонент выполняется 
+\begin_inset Quotes ard
+\end_inset
+
+на месте
+\begin_inset Quotes ald
+\end_inset
+
+, то есть рассчитанное в каждый последующий момент времени значение помещается
+ в ту же ячейку сетки И, в которой находилось значение для предыдущего момента.
+ Это позволяет несколько снизить требования к оперативной памяти, предъявляемые
+ методом.
+\end_layout
+
+\begin_layout Standard
+Однако приведённые выше базовые уравнения пригодны только для бесконечной
+ счётной области.
+ Очевидно, произвести расчёт в такой области за конечное время невозможно,
+ но существуют методы, позволяющие получать решение электродинамической
+ задачи при ограниченном счётном объёме.
+ Среди них наибольшее распространение получили граничные условия идеального
+ отражения и система 
+\emph on
+идеально согласованных слоёв
+\emph default
+
+\begin_inset space ~
+\end_inset
+
+(англ.
+\begin_inset space ~
+\end_inset
+
+
+\emph on
+Perfectly Matched Layer
+\emph default
+, 
+\emph on
+PML
+\emph default
+), впервые описанная в работе
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Berenger94"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Использование первого из этих методов приводит к многократному переотражению
+ сигнала внутри счётной области, два других позволяют существенно уменьшить
+ отражение волны от границы.
+ Граничные условия отражения намного проще, чем PML, однако система согласованны
+х слоёв позволяет достичь на порядки меньшего коэффициента отражения от
+ границы счётного объёма.
+\end_layout
+
+\begin_layout Subsection
+Условия идеального отражения
+\end_layout
+
+\begin_layout Standard
+Предположим, счётный объём окружён бесконечным идеальным проводником.
+ Тогда напряжённости поля за пределами счётной области будут нулевыми, а
+ электромагнитные волны, достигающие границ счётного объёма, будут полностью
+ отражаться вовнутрь.
+\end_layout
+
+\begin_layout Standard
+На практике это условие реализуется очень просто: счетный объём окружается
+ дополнительным слоем ячеек, поле в которых изначально инициализируется
+ нулями и никогда не высчитывается.
+\end_layout
+
+\begin_layout Standard
+Однако данные граничные условия имеют серьёзный недостаток: чтобы отражённая
+ от границ счётной области волна не вносила существенных искажений в происходящи
+е внутри неё физические процессы, границы должны находиться достаточно далеко
+ от интересующей нас области.
+ Увеличение счётного объёма, в свою очередь, приводит к существенному увеличению
+ времени расчёта и объёму оперативной памяти.
+\end_layout
+
+\begin_layout Subsection
+Граничные условия PML
+\end_layout
+
+\begin_layout Standard
+Данный тип граничных условий (строго говоря, являющихся поглощающей приграничной
+ областью, а не граничным условием, как таковым) считается одним из лучших
+ на данный момент ввиду своей эффективности при использовании вкупе с неоднородн
+ыми, дисперсионными, анизотропными и нелинейными средами
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Taflove2005"
+
+\end_inset
+
+.
+ Основной идеей PML является окружение счётной области слоем анизотропного
+ поглощающего материала, обладающего рядом особенностей.
+\end_layout
+
+\begin_layout Standard
+Одной из таких особенностей является постоянство волнового сопротивления
+ на границе раздела «счётная область — согласованный слой» при равенстве
+ 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ и 
+\begin_inset Formula $\mu$
+\end_inset
+
+ по обе стороны границы и соблюдении следующего соотношения: 
+\begin_inset Formula 
+\[
+\frac{\sigma}{\varepsilon}=\frac{\sigma^{*}}{\mu}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Электрическая и магнитная проводимость возрастают с увеличением расстояния
+ вглубь слоя PML по некоторому закону, называемому 
+\emph on
+профилем потерь
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+В оригинальной работе Беренже
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Berenger"
+
+\end_inset
+
+ был предложен следующий профиль потерь, как оптимальный по уровню отражения
+ от границы раздела: 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{\text{PML}}(i)=\left\{ \begin{array}{ll}
+\sigma_{\text{PML}}(0)\frac{\sqrt{g}-1}{\ln g} & \text{при~}i=0,\\
+\sigma_{\text{PML}}(0)\frac{g-1}{\sqrt{g}\ln g}g^{i} & \text{при~}i=\frac{1}{2},1,\frac{3}{2},~\ldots
+\end{array}\right.\label{eq:LossProfile1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma_{\text{PML}}(0)=-\frac{\varepsilon_{0}\ln g}{2d\varepsilon_{0}\mu_{0}(g^{N}-1)}\ln r;\label{eq:LossProfile2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma_{\text{PML}}^{*}(i)=\frac{\mu}{\varepsilon}\sigma_{\text{PML}}(i).\label{eq:LossProfile3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+В приведенных выше формулах использованы следующие обозначения: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{\text{PML}}(i)$
+\end_inset
+
+ — электрическая проводимость 
+\begin_inset Formula $i$
+\end_inset
+
+-го слоя; 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{\text{PML}}^{*}(i)$
+\end_inset
+
+ — магнитная проводимость 
+\begin_inset Formula $i$
+\end_inset
+
+-го слоя; 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+ — подбираемый эмпирически параметр; 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r$
+\end_inset
+
+ — требуемый начальный коэффициент отражения; 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d$
+\end_inset
+
+ — интервал дискретизации пространства в данном направлении; 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N$
+\end_inset
+
+ — толщина слоя PML.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Приблизительная оценка толщины слоя PML может быть получена из следующего
+ соотношения: 
+\begin_inset Formula 
+\begin{equation}
+N=\frac{1}{\ln g}\ln\left[1-\frac{(\sqrt{g}-1)\Theta t_{p}}{4\pi d\sqrt{\varepsilon_{0}\mu_{0}}}\ln r\right],\label{eq:hz1}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+ — длительность процесса моделирования во времени, а параметр
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Theta$
+\end_inset
+
+ подбирается эмпирически (обычно 
+\begin_inset Formula $\Theta\approx10$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Ещё одной особенностью идеально согласованных слоёв является введения ограничени
+я снизу на область допустимых частот.
+ Сигналы с частотой, меньшей чем некоторое значение 
+\begin_inset Formula $f_{\text{min}}$
+\end_inset
+
+, называемое 
+\emph on
+частотой отсечки
+\emph default
+, отражаются от границы PML.
+ Ниже приведено выражение для частоты отсечки: 
+\begin_inset Formula 
+\begin{equation}
+f_{\text{min}}=\frac{\sigma_{\text{PML}}(0)}{2\pi\varepsilon_{0}}.\label{eq:PmlCutoffFrequency}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Основная идея получения базовых уравнений для расчета компонент поля в согласова
+нном слое состоит в том, что компоненты векторов 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ и 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ представляются в виде суммы двух слагаемых: 
+\begin_inset Formula 
+\begin{align}
+E_{x} & =E_{xy}+E_{xz},\label{eq:PmlSplitFieldEquations}\\
+E_{y} & =E_{yx}+E_{yz},\nonumber \\
+E_{z} & =E_{zx}+E_{zy},\nonumber \\
+H_{x} & =H_{xy}+H_{xz},\nonumber \\
+H_{y} & =H_{yx}+H_{yz},\nonumber \\
+H_{z} & =H_{zx}+H_{zy}.\nonumber 
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Анизотропия согласованного слоя проявляется в следующем: каждой ячейке соответст
+вует набор 
+\begin_inset Formula $(\sigma_{x},\sigma_{y},\sigma_{z})$
+\end_inset
+
+, причем элемент 
+\begin_inset Formula $\sigma_{\alpha}$
+\end_inset
+
+ (
+\begin_inset Formula $\alpha=\left\{ x,y,z\right\} $
+\end_inset
+
+) не равен нулю только для ячеек слоя, пересекаемого соответствующей осью
+ координат
+\begin_inset space ~
+\end_inset
+
+(рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PML"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image4195.png
+	lyxscale 50
+	width 90text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Анизотропия PML.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PML"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В дискретной форме системы уравнений для компонент электрической и магнитной
+ напряжённости в области PML выглядят следующим образом: 
+\begin_inset Formula 
+\begin{equation}
+\left\{ \begin{aligned}H_{xy(i,j,k)}^{n+1}=D_{ay(i,j,k)}H_{xy(i,j,k)}^{n}-D_{by(i,j,k)}\left[\frac{E_{z(i,j+1,k)}^{n}-E_{z(i,j,k)}^{n}}{\Delta y}\right],\\
+H_{xz(i,j,k)}^{n+1}=D_{az(i,j,k)}H_{xz(i,j,k)}^{n}+D_{bz(i,j,k)}\left[\frac{E_{y(i,j,k+1)}^{n}-E_{y(i,j,k)}^{n}}{\Delta z}\right],\\
+H_{yx(i,j,k)}^{n+1}=D_{ax(i,j,k)}H_{yx(i,j,k)}^{n}+D_{bx(i,j,k)}\left[\frac{E_{z(i+1,j,k)}^{n}-E_{z(i,j,k)}^{n}}{\Delta x}\right],\\
+H_{yz(i,j,k)}^{n+1}=D_{az(i,j,k)}H_{yz(i,j,k)}^{n}-D_{bz(i,j,k)}\left[\frac{E_{x(i,j,k+1)}^{n}-E_{x(i,j,k)}^{n}}{\Delta z}\right],\\
+H_{zx(i,j,k)}^{n+1}=D_{ax(i,j,k)}H_{zx(i,j,k)}^{n}-D_{bx(i,j,k)}\left[\frac{E_{y(i+1,j,k)}^{n}-E_{y(i,j,k)}^{n}}{\Delta x}\right],\\
+H_{zy(i,j,k)}^{n+1}=D_{ay(i,j,k)}H_{zy(i,j,k)}^{n}+D_{by(i,j,k)}\left[\frac{E_{x(i,j+1,k)}^{n}-E_{x(i,j,k)}^{n}}{\Delta y}\right].
+\end{aligned}
+\right.\label{eq:PmlFormulas1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ \begin{aligned}E_{xy(i,j,k)}^{n+1}=C_{ay(i,j,k)}E_{xy(i,j,k)}^{n}+C_{by(i,j,k)}\left[\frac{H_{z(i,j,k)}^{n+1}-H_{z(i,j-1,k)}^{n+1}}{\Delta y}\right],\\
+E_{xz(i,j,k)}^{n+1}=C_{az(i,j,k)}E_{xz(i,j,k)}^{n}-C_{bz(i,j,k)}\left[\frac{H_{y(i,j,k)}^{n+1}-H_{y(i,j,k-1)}^{n+1}}{\Delta z}\right],\\
+E_{yx(i,j,k)}^{n+1}=C_{ax(i,j,k)}E_{yx(i,j,k)}^{n}-C_{bx(i,j,k)}\left[\frac{H_{z(i,j,k)}^{n+1}-H_{z(i-1,j,k)}^{n+1}}{\Delta x}\right],\\
+E_{yz(i,j,k)}^{n+1}=C_{az(i,j,k)}E_{yz(i,j,k)}^{n}+C_{bz(i,j,k)}\left[\frac{H_{x(i,j,k)}^{n+1}-H_{x(i,j,k-1)}^{n+1}}{\Delta z}\right],\\
+E_{zx(i,j,k)}^{n+1}=C_{ax(i,j,k)}E_{zx(i,j,k)}^{n}+C_{bx(i,j,k)}\left[\frac{H_{y(i,j,k)}^{n+1}-H_{y(i-1,j,k)}^{n+1}}{\Delta x}\right],\\
+E_{zy(i,j,k)}^{n+1}=C_{ay(i,j,k)}E_{zy(i,j,k)}^{n}-C_{by(i,j,k)}\left[\frac{H_{x(i,j,k)}^{n+1}-H_{x(i,j-1,k)}^{n+1}}{\Delta y}\right].
+\end{aligned}
+\right.\label{eq:PmlFormulas2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Коэффициенты
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $C$
+\end_inset
+
+ и
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $D$
+\end_inset
+
+ уравнениях выше вычисляются по формулам: 
+\begin_inset Formula 
+\[
+\begin{aligned}D_{ax(i,j,k)}=\frac{1-\frac{\sigma_{x(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}}{1+\frac{\sigma_{x(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}},\\
+D_{bx(i,j,k)}=\frac{\frac{\Delta t}{\mu_{(i,j,k)}}}{1+\frac{\sigma_{x(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}},
+\end{aligned}
+\quad\begin{aligned}D_{ay(i,j,k)}=\frac{1-\frac{\sigma_{y(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}}{1+\frac{\sigma_{y(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}},\\
+D_{by(i,j,k)}=\frac{\frac{\Delta t}{\mu_{(i,j,k)}}}{1+\frac{\sigma_{y(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}},
+\end{aligned}
+\quad\begin{aligned}D_{az(i,j,k)}=\frac{1-\frac{\sigma_{z(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}}{1+\frac{\sigma_{z(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}},\\
+D_{bz(i,j,k)}=\frac{\frac{\Delta t}{\mu_{(i,j,k)}}}{1+\frac{\sigma_{z(i,j,k)}^{*}\Delta t}{2\mu_{(i,j,k)}}},
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}C_{ax(i,j,k)}=\frac{1-\frac{\sigma_{x(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}}{1+\frac{\sigma_{x(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}},\\
+C_{bx(i,j,k)}=\frac{\frac{\Delta t}{\varepsilon_{(i,j,k)}}}{1+\frac{\sigma_{x(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}},
+\end{aligned}
+\quad\begin{aligned}C_{ay(i,j,k)}=\frac{1-\frac{\sigma_{y(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}}{1+\frac{\sigma_{y(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}},\\
+C_{by(i,j,k)}=\frac{\frac{\Delta t}{\varepsilon_{(i,j,k)}}}{1+\frac{\sigma_{y(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}},
+\end{aligned}
+\quad\begin{aligned}C_{az(i,j,k)}=\frac{1-\frac{\sigma_{z(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}}{1+\frac{\sigma_{z(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}},\\
+C_{bz(i,j,k)}=\frac{\frac{\Delta t}{\varepsilon_{(i,j,k)}}}{1+\frac{\sigma_{z(i,j,k)}\Delta t}{2\varepsilon_{(i,j,k)}}},
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Следует заметить, что в реальной ситуации всегда присутствуют отражения.
+ Они складываются из: 
+\end_layout
+
+\begin_layout Itemize
+отражений от первого слоя PML; 
+\end_layout
+
+\begin_layout Itemize
+отражений между слоями PML; 
+\end_layout
+
+\begin_layout Itemize
+отражений от проводящей границы за последним слоем PML.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+В связи с этим, для уменьшения отражения от первого слоя добиваются малого
+ значения
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sigma_{0}$
+\end_inset
+
+.
+ Отражения между слоями подавляются за счет ограничения скорости роста профиля
+ потерь.
+ Для уменьшения влияния волны, отраженной от бесконечно проводящей границы,
+ увеличивают число слоёв PML.
+\end_layout
+
+\begin_layout Subsection
+Точечный резистивный источник напряжения
+\end_layout
+
+\begin_layout Standard
+Возможность моделировать сосредоточенные элементы вводится дополнительно,
+ при этом границы применения метода существенно расширяются.
+ В частности, точечный генератор напряжения с заданным внутренним сопротивлением
+ оказывается весьма удобной моделью источника питания.
+\end_layout
+
+\begin_layout Standard
+Достоинством этого дополнения метода конечных разностей во временной области
+ является то, что вид уравнений меняется весьма незначительно.
+ Если источник ориентирован вдоль оси 
+\begin_inset Formula $Z$
+\end_inset
+
+, то в системе уравнений Максвелла
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MaxwellEquations"
+
+\end_inset
+
+ изменится только одна составляющая векторного уравнения для ротора вектора
+ магнитной напряжённости:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\Rot\vec{H}\right){}_{z}=\varepsilon\frac{\partial E_{z}}{\partial t}+\sigma E_{z}+\frac{I_{L}}{\Delta x\Delta y},\label{eq:LumpedSource:MaxwellEquationsAmendment}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $I_{L}$
+\end_inset
+
+ — ток через источник.
+\end_layout
+
+\begin_layout Standard
+Подвергнув уравнение
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LumpedSource:MaxwellEquationsAmendment"
+
+\end_inset
+
+ действию конечно-разностной схемы и положив
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sigma_{E}=0$
+\end_inset
+
+, получим следующую формулу: 
+\begin_inset Formula 
+\begin{multline}
+\fYee{E_{z}}{n+1}{i,j,k}=\fYee{E_{z}}n{i,j,k}+\frac{\Delta t}{\yee{\varepsilon}{}{i,j,k}}\left[\frac{\yee{H_{y}}{n+1}{i,j,k}-\yee{H_{y}}{n+1}{i-1,j,k}}{\Delta x}-\frac{\yee{H_{x}}{n+1}{i,j,k}-\yee{H_{x}}{n+1}{i,j-1,k}}{\Delta y}\right]-\\
+-\frac{\yee{I_{L}}{n+1}{}\Delta t}{\yee{\varepsilon}{}{i,j,k}\Delta x\Delta y}.\label{eq:LumpedSource:FdtdEquationsAmendmentWithI}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Формула
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LumpedSource:FdtdEquationsAmendmentWithI"
+
+\end_inset
+
+ позволяет моделировать точечный источник тока внутри счётного объёма.
+\end_layout
+
+\begin_layout Standard
+Согласно закону Ома и работе
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Makinen"
+
+\end_inset
+
+, для рассматриваемого сосредоточенного генератора напряжения с внутренним
+ сопротивлением 
+\begin_inset Formula $R$
+\end_inset
+
+ будет иметь место равенство 
+\begin_inset Formula 
+\begin{equation}
+\fYee{I_{L}}{n+1}{}=\frac{\Delta z}{2R}\left(\fYee{E_{z}}{n+1}{i,j,k}-\Yee{E_{z}}n{i,j,k}\right)+\frac{\yee{U_{s}}{n+1}{}}{R},\label{eq:LumpedSource:OhmLaw}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $U_{s}$
+\end_inset
+
+ — генерируемое источником напряжение.
+\end_layout
+
+\begin_layout Standard
+После подстановки
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LumpedSource:OhmLaw"
+
+\end_inset
+
+ в
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LumpedSource:FdtdEquationsAmendmentWithI"
+
+\end_inset
+
+ получим простое уравнение для
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $E_{z}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{multline*}
+\fYee{E_{z}}{n+1}{i,j,k}=\fYee{C_{E}}{}{i,j,k}\fYee{E_{z}}n{i,j,k}~~+~~\Yee{C_{H}}{}{i,j,k}\left[\frac{\yee{H_{y}}{n+1}{i,j,k}-\yee{H_{y}}{n+1}{i-1,j,k}}{\Delta x}\right.-\\
+-\left.\frac{\yee{H_{x}}{n+1}{i,j,k}-\yee{H_{x}}{n+1}{i,j-1,k}}{\Delta y}-\frac{\yee{U_{s}}{n+1}{}}{R\Delta x\Delta y}\right],
+\end{multline*}
+
+\end_inset
+
+где 
+\begin_inset Formula $C_{E}$
+\end_inset
+
+ и
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $C_{H}$
+\end_inset
+
+ определяются по следующим формулам: TODO
+\end_layout
+
+\begin_layout Standard
+Формулы для прочих компонент остаются неизменными.
+ 
+\end_layout
+
+\begin_layout Section
+Неспециализированные вычисления на графических процессорах
+\end_layout
+
+\begin_layout Standard
+Прообразом первых графических процессоров, появившихся в 90\SpecialChar softhyphen
+е
+\begin_inset space ~
+\end_inset
+
+годы XX
+\begin_inset space ~
+\end_inset
+
+века, были специализированные чипы аркадных автоматов.
+ Их использование было обусловлено малыми объёмами оперативной памяти, что
+ не позволяло хранить в ней кадры перед отправкой на устройство видеовывода.
+ В дальнейшем разделение вычислений на графические и неграфические лишь
+ усугубилось, что оказало существенное влияние на архитектуру современных
+ компьютеров.
+\end_layout
+
+\begin_layout Standard
+В начале XXI
+\begin_inset space ~
+\end_inset
+
+века графические процессоры получили поддержку шейдеров и возможность работы
+ с числами с плавающей запятой.
+ Это событие положило начало ряду экспериментов с организацией неграфических
+ параллельных расчётов на графических процессорах.
+ При помощи графических API данные передавались в виде текстур, а расчётные
+ программы — в виде шейдеров
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Berillo"
+
+\end_inset
+
+.
+ Таким образом учёные начали производить вычисления, связанные с матрицами
+ и векторами, на ГПУ.
+ Первой программой, выполнившейся заметно быстрее на ГПУ, чем на ЦПУ, стала
+ реализация LU-разложения, описанная в работе
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Galoppo"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+С увеличением популярности использования ГПУ для научных расчётов начали
+ формироваться идеи фреймворков общего назначения, позволяющих отойти от
+ графической парадигмы работы с данными и отказаться от использования OpenGL
+ или DirectX.
+ Такими фреймворками впоследствии стали технологии NVIDIA CUDA и OpenCL.
+\end_layout
+
+\begin_layout Subsection
+Краткий обзор технологии NVIDIA CUDA
+\end_layout
+
+\begin_layout Standard
+Первоначальная версия NVIDIA CUDA SDK была представлена 15
+\begin_inset space ~
+\end_inset
+
+февраля
+\begin_inset space ~
+\end_inset
+
+2007
+\begin_inset space ~
+\end_inset
+
+г.
+ В основе NVIDIA CUDA API лежит диалект языка C++.
+\end_layout
+
+\begin_layout Standard
+Для компиляции программ NVIDIA CUDA SDK предлагает специализированный компилятор
+ nvcc.
+ При этом код программ разделяется на host-часть, выполняющуюся ЦПУ, и device-ча
+сть, выполняющуюся графическим процессором.
+ В результате получаются как минимум два объектных файла, готовых к сборке
+ в конечный исполняемый файл в любой среде программирования
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CUDADoc"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+По сравнению с использовавшимся ранее подходом к организации вычислений
+ общего назначения посредством возможностей графических API, архитектура
+ CUDA имеет ряд преимуществ: 
+\end_layout
+
+\begin_layout Itemize
+использование диалекта языка C++, что позволяет упростить процесс изучения
+ архитектуры; 
+\end_layout
+
+\begin_layout Itemize
+полная аппаратная поддержка целочисленных и побитовых операций; 
+\end_layout
+
+\begin_layout Itemize
+разделяемая между потоками память размером в 16 Кбайт может быть использована
+ под организованный пользователем кэш с более широкой полосой пропускания,
+ чем при выборке из обычных текстур.
+ 
+\end_layout
+
+\begin_layout Subsection
+Краткий обзор технологии OpenCL
+\end_layout
+
+\begin_layout Standard
+OpenCL — фреймворк для написания компьютерных программ, реализующих параллельные
+ вычисления на различных графических и центральных процессорах, а также
+ ППВМ.
+ В OpenCL входят язык программирования, базирующийся на стандарте C99, и
+ интерфейс программирования приложений.
+\end_layout
+
+\begin_layout Standard
+Основной задачей проекта OpenCL является создание и поддержка открытого
+ стандарта, позволяющего разрабатывать универсальные программы для параллельных
+ вычислений на различных процессорах и создавать вычислительные машины,
+ использующие несколько процессоров различных архитектур одновременно.
+\end_layout
+
+\begin_layout Standard
+OpenCL рассматривает компьютерную систему как совокупность вычислительных
+ устройств (ЦПУ и ГПУ), подключённых к управляющему ЦПУ, называемому хостом.
+ Функции, предназначенные для выполнения на вычислительных устройствах,
+ называются функциями-ядрами и могут выполняться параллельно на нескольких
+ устройствах.
+\end_layout
+
+\begin_layout Subsection
+Иерархия потоков выполнения в NVIDIA CUDA
+\end_layout
+
+\begin_layout Standard
+Как упоминалось ранее, одной из особенностей написания программ с использованием
+ технологии NVIDIA CUDA является разделение всего программного кода на host-
+ и device-части.
+ Для этого используются спецификаторы функций: 
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+__host__
+\family default
+ код предназначен для выполнения на ЦПУ (используется по умолчанию ); 
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+__device__
+\family default
+ код предназначен для выполнения на вычислительном устройстве; 
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+__global__
+\family default
+ особый спецификатор для так называемых функций-ядер (kernel), которые запускают
+ся с центрального процессора, а работают на видеокарте.
+ 
+\end_layout
+
+\begin_layout Standard
+Остановимся подробнее на 
+\emph on
+функциях-ядрах
+\emph default
+.
+ Их отличие от обычных функций языка C++ заключается в том, что при вызове
+ они выполняются N раз параллельно в N потоках выполнения.
+ При этом количество потоков выполнения, которые можно создать на ГПУ, практичес
+ки не ограничено.
+\end_layout
+
+\begin_layout Standard
+Для организации работы со столь большим количеством потоков используется
+ иерархическая структура: потоки объединяются в варпы (warp), варпы, в свою
+ очередь, — в блоки (block), а блоки составляют сетку (grid).
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Варп
+\emph default
+ — это минимальная независимая от других единица выполнения кода.
+ Размер варпа всегда равен 32 потокам.
+ Эти потоки всегда выполняются физически синхронно.
+ 
+\emph on
+Блок
+\emph default
+ — это автономная группа потоков.
+ Взаимодействия потоков между блоками невозможны.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{basicstyle=
+\backslash
+ttfamily}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вызов функции-ядра осуществляется следующим образом:
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+kernel_name<<<grid_size, block_size>>>(arguments);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В тройных угловых скобках в участке программного кода выше указываются размеры
+ сетки и блока.
+\end_layout
+
+\begin_layout Standard
+Примером может послужить программа для перемножения матриц: она иллюстрирует
+ параллельное выполнения потоков с помощью многократного повторения операции
+ сложения с разными числами.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+__global__ void MatAdd(
+\end_layout
+
+\begin_layout Plain Layout
+
+	float A[N][N], float B[N][N], float C[N][N])
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	int i = threadIdx.x;
+\end_layout
+
+\begin_layout Plain Layout
+
+	int j = threadIdx.y;
+\end_layout
+
+\begin_layout Plain Layout
+
+	C[i][j] = A[i][j] + B[i][j];
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	...
+\end_layout
+
+\begin_layout Plain Layout
+
+	int numBlocks = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+	dim3 threadsPerBlock(N, N);
+\end_layout
+
+\begin_layout Plain Layout
+
+	MatAdd<<<numBlocks, threadsPerBlock>>>(A, B, C);
+\end_layout
+
+\begin_layout Plain Layout
+
+	...
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Во фрагменте исходного кода выше 
+\family typewriter
+threadIdx
+\family default
+ — трёхкомпонентный вектор, хранящий координаты потока в блоке (рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ThreadsStructure"
+
+\end_inset
+
+).
+ Таким образом, видим: имеется один блок размеров 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ и три массива той же размерности.
+ Каждому потоку ставится в соответствие по одному элементу каждой из трёх
+ матриц.
+ Следовательно, все потоки покрывают все элементы матриц.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image2.png
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Иерархическая структура потоков выполнения.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ThreadsStructure"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Иерархия памяти в NVIDIA CUDA
+\end_layout
+
+\begin_layout Standard
+Согласно статье
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Frolov"
+
+\end_inset
+
+ в NVIDIA CUDA выделяют следующие виды памяти: 
+\end_layout
+
+\begin_layout Itemize
+регистры процессора — блок ячеек памяти внутри процессора, из которой на
+ каждый поток выполнения выделяются регистры; 
+\end_layout
+
+\begin_layout Itemize
+локальная память — участок глобальной памяти, обособленно выделяемой потоку
+ при нехватке регистров; 
+\end_layout
+
+\begin_layout Itemize
+глобальная память — аналог оперативной памяти ПК и основной вид памяти,
+ используемый для обмена данными между ЦПУ и ГПУ; 
+\end_layout
+
+\begin_layout Itemize
+разделяемая память — область памяти, одинаково адресуемой для всех потоков
+ выполнения внутри блока; 
+\end_layout
+
+\begin_layout Itemize
+константная память — тип памяти, модификация которой возможна только с ЦПУ;
+ 
+\end_layout
+
+\begin_layout Itemize
+текстурная память — интерфейс чтения глобальной памяти с использованием
+ специфических для текстур операций.
+ 
+\end_layout
+
+\begin_layout Standard
+Для каждого потока выделяется локальная память (регистровая и, опционально,
+ дополнительная).
+ Для каждого блока выделяется разделяемая память, доступ к которой имеют
+ все потоки блока.
+ Разделяемая память выделена, пока существует блок.
+ Все существующие потоки имеют доступ к глобальной памяти.
+ Также каждый поток имеет доступ к чтению константной и текстурной памяти.
+ Глобальная, константная и текстурная память не перевыделяются на протяжении
+ работы программы, т.
+ о.
+ разные функции-ядра могут работать с этими видами памяти (рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MemoryStructure"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image3.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Иерархическая структура памяти и права доступа к ней.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MemoryStructure"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Иерархия потоков выполнения в OpenCL
+\end_layout
+
+\begin_layout Standard
+Иерархическая модель потоков выполнения OpenCL концептуально не отличается
+ от своего аналога от компании NVIDIA.
+\end_layout
+
+\begin_layout Standard
+Аналогом потоков в OpenCL являются 
+\emph on
+рабочие элементы
+\emph default
+ (
+\emph on
+work-item
+\emph default
+).
+ Они объединяются в 
+\emph on
+рабочие группы
+\emph default
+ (
+\emph on
+work-group
+\emph default
+), причём рабочие элементы, принадлежащие разным рабочим группам, не могут
+ взаимодействовать.
+\end_layout
+
+\begin_layout Standard
+На рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:WorkGroupsStructure"
+
+\end_inset
+
+ изображён пример 
+\emph on
+двухмерного пространства индексов
+\emph default
+ (2D\SpecialChar nobreakdash
+range index space), являющегося аналогом сетки в NVIDIA CUDA.
+ В общем случае пространство индексов является N-мерным.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image4.png
+	lyxscale 70
+	width 90text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Иерархическая структура рабочих групп.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:WorkGroupsStructure"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Данное пространство индексов разделено на 16 рабочих групп, имеющих собственные
+ координаты и размер 
+\begin_inset Formula $8\times8$
+\end_inset
+
+.
+ Рабочие элементы имеют два типа координат: локальные (относительно рабочей
+ группы) и глобальные (относительно сетки целиком).
+\end_layout
+
+\begin_layout Standard
+По аналогии с NVIDIA
+\begin_inset space ~
+\end_inset
+
+CUDA используются функции-ядра, выполняющиеся на вычислительном устройстве.
+\end_layout
+
+\begin_layout Subsection
+Иерархия памяти в OpenCL
+\end_layout
+
+\begin_layout Standard
+Так как хост и вычислительное устройство не имеют общего адресного пространства,
+ взаимодейстие между памятью хоста и памятью OpenCL-устройства происходит
+ посредством использования различных областей памяти (рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:OpenCLMemoryStructure"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image5.png
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Иерархия памяти в OpenCL.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:OpenCLMemoryStructure"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Глобальная память — это участок памяти, к которому все рабочие элементы,
+ группы, а также хост, имеют полный доступ (чтение и запись).
+ Эта область памяти может быть выделена только хостом.
+\end_layout
+
+\begin_layout Standard
+Константная память — это участок глобальной памяти, остающийся нетронутым
+ на протяжении выполнения функции-ядра.
+ Рабочие группы могут только читать данные из этой области, хост же имеет
+ к ней полный доступ.
+\end_layout
+
+\begin_layout Standard
+Локальная память — это место обмена данными между рабочими элементами рабочей
+ группы.
+ Все элементы имеют полный доступ к этой области.
+\end_layout
+
+\begin_layout Standard
+Внутренняя память — это память, принадлежащая конкретному рабочему элементу.
+\end_layout
+
+\begin_layout Standard
+В большинстве случаев память хоста и память OpenCL-устройства работают независим
+о друг от друга.
+ Соответственно, имеется специфика обмена данными между ними: необходимо
+ перемещать данные из памяти хоста в глобальную память, затем в локальную,
+ и обратно.
+\end_layout
+
+\begin_layout Subsection
+Специфика работы с видеопамятью
+\end_layout
+
+\begin_layout Standard
+Перед организацией параллельных вычислений следует ознакомиться с некоторыми
+ приёмами оптимизации, которые помогут сохранить производительность, выигранную
+ от использования ГПУ.
+ Наиболее широко распространённым и лёгким в освоении приёмом является согласова
+нный доступ к памяти, аналогичный выравниванию памяти при работе ЦПУ с оперативн
+ой памятью.
+\end_layout
+
+\begin_layout Standard
+Глобальная память физически расположена на device-устройстве, доступ к которой
+ происходит посредством 32-, 64- и 128-байтных транзакций.
+ Необходимое условие для их существования — обращение к выровненным участкам
+ памяти.
+ Таковыми являются участки, адреса первых элементов которых кратны 32, 64
+ и 128 байтам соответственно.
+\end_layout
+
+\begin_layout Standard
+Когда варп выполняет инструкцию, обращающуюся к глобальной памяти, обращения
+ каждого потока внутри варпа сливаются в одну или несколько транзакций,
+ в зависимости от размера слова, запрашиваемого каждым потоком, и разброса
+ адресов, к которым обращаются потоки.
+\end_layout
+
+\begin_layout Standard
+Команды работы с глобальной памятью поддерживают чтение и запись слов размером
+ 1, 2, 4, 8 и 16 байтов.
+ Любой запрос к глобальной памяти возможен только в случае, если размер
+ запрашиваемых данных равен 1, 2, 4, 8 или 16 байтам, и они выровнены (т.
+\begin_inset space ~
+\end_inset
+
+е.
+\begin_inset space ~
+\end_inset
+
+их адреса кратны размеру).
+\end_layout
+
+\begin_layout Standard
+Затем одиночные запросы к глобальной памяти объединяются в транзакции.
+ Например, запросы 32 потоков одного варпа, обращающиеся к четырём последователь
+но располагающимся байтам каждый, объединятся в транзакцию размером 128
+ байтов в том случае, если адрес, к которому обращается первый поток варпа,
+ кратен 128 байтам.
+\end_layout
+
+\begin_layout Section
+Программная реализация
+\end_layout
+
+\begin_layout Standard
+В рамках данной работы была разработана компьютерная программа, рассчитывающая
+ значения электрической и магнитной напряжённости на произвольном удалении
+ от источника электромагнитных возмущений в произольный момент времени с
+ помощью метода конечных разностей во временной области с использованием
+ ЦПУ либо ГПУ.
+\end_layout
+
+\begin_layout Subsection
+Реализация сетки И и базового алгоритма
+\end_layout
+
+\begin_layout Standard
+Разработка программы велась на языке С++, поэтому в качестве программного
+ представления сетки И было решено использовать тип данных «класс».
+ Входными аргументами конструктора класса выступают линейные размеры сетки,
+ выраженные в количестве ячеек вдоль каждой координатной оси и величины
+ 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta y$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta z$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+.
+ Сам класс хранит информацию об электрической и магнитной напряжённости
+ поля, удельной электрической и магнитной проводимости, диэлектрической
+ и магнитной проницаемости для каждой точки счётного объёма.
+\end_layout
+
+\begin_layout Standard
+Из рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:YeeGrid"
+
+\end_inset
+
+ легко заметить, что все данные сетки (значения диэлектрической и магнитной
+ проницаемости, удельной электрической и магнитной проводимости, координатных
+ компонент векторов электрической и магнитной напряжённости поля) представляют
+ собой трёхмерные массивы с номерами ячеек 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\begin_inset Formula $k$
+\end_inset
+
+ в качестве индексов.
+\end_layout
+
+\begin_layout Standard
+Первым этапом создания программной реализации метода конечных разностей
+ во временной области стало выделение из формул базового алгоритма коэффициентов
+ и написание функций для их расчёта.
+ Неизменность коэффициентов позволяет рассчитывать их единожды при старте
+ программы и использовать готовые значения при пересчёте характеристик поля
+ в каждой ячейке для каждого момента времени.
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Standard
+Данные коэффициенты приведены в формуле
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:CDCoeffs"
+
+\end_inset
+
+, где 
+\begin_inset Formula $P$
+\end_inset
+
+ — проницаемость материала (диэлектрическая и магнитная для компонент векторов
+ 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ и 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ соответственно), а 
+\begin_inset Formula $S$
+\end_inset
+
+ — удельная проводимость (электрическая и магнитная для компонент векторов
+ 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ и 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ соответственно).
+\end_layout
+
+\begin_layout Standard
+Следующим шагом стало написание функций, предназначенных для расчёта проекций
+ векторов электрической и магнитной напряжённости во всех точках счётного
+ объёма в какой-либо момент времени.
+ Программный код, производящий расчёт компонент вектора магнитной напряжённости,
+ приведён в приложении
+\begin_inset space ~
+\end_inset
+
+А.
+\end_layout
+
+\begin_layout Standard
+Поскольку базовый алгоритм метода предполагает пространственную неограниченность
+ счётного объёма, что невозможно реализовать ввиду конечности объёма оперативной
+ памяти, очевидной необходимостью при разработке программы стало введение
+ граничных условий идеального отражения.
+ Реализация данных условий заключалась в увеличении счётного объёма на одну
+ ячейку, значение электрического поля для которой изначально равнялось нулю
+ и никогда не высчитывалось, вдоль всех координатных осей.
+\end_layout
+
+\begin_layout Standard
+Однако граничные условия идеального отражения спустя непродолжительное время
+ симуляции искажают картину полей внутри счётной области.
+ По этой причине было решено прибегнуть к граничным условиям PML.
+ Их программная реализация заключалась в замене удельной электрической и
+ магнитной проводимости пограничных ячеек счётного объёма согласно формулам
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LossProfile1"
+
+\end_inset
+
+–
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LossProfile3"
+
+\end_inset
+
+, а также пересчёту значений электрической и магнитной проводимости в них
+ по формулам
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PmlFormulas1"
+
+\end_inset
+
+ и
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PmlFormulas2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Тестовая задача
+\end_layout
+
+\begin_layout Standard
+Симметричный вибратор — простейшая система для получения электромагнитных
+ колебаний.
+ Она представляет собой электрический диполь, дипольный момент которого
+ быстро изменяется во времени, и является развёрнутым колебательным контуром
+ с минимальной ёмкостью и индуктивностью.
+\end_layout
+
+\begin_layout Standard
+В исходном коде конечной программы симметричный вибратор был представлен
+ двадцатью ячейками счётного объёма, расположенными вдоль оси
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Z$
+\end_inset
+
+, с отличными от остальных удельной электрической проводимостью материала
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+ и абсолютной диэлектрической проницаемостью материала
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ Длина волны была подобрана таким образом, чтобы отношение длины диполя
+ к длине волны было равно двум.
+\end_layout
+
+\begin_layout Standard
+Следующим этапом моделирования резистивного источника стал пересчёт значений
+ проекции вектора 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ на ось
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ Во избежание проверки каждой ячейки на наличие там проводящих структур
+ было принято решение сохранять информацию обо всех ячейках до расчёта значений
+ вектора электрической напряжённости, затем выполнять этот расчёт и, наконец,
+ пересчёт значений проекции вектора
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ на ось
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Z$
+\end_inset
+
+ только в точках присутствия элементов источника.
+\end_layout
+
+\begin_layout Standard
+На рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EzPmlOff"
+
+\end_inset
+
+ представлена динамика изменения картины электрического поля в счётном объёме
+ с граничными условиями идеального отражения с течением времени, на рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EzPmlOn"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+— с граничными условиями PML.
+ Легко заметить, что в первом случае наблюдаются искажения, отсутствующие
+ во втором, что наглядно показывает эффективность граничных условий PML.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Это пример использования subfigure.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-off-0.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 1 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-off-1.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-off-2.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-off-3.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-off-4.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-off-5.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Изменение электрического поля во времени (без PML).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EzPmlOff"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-on-0.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 1 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-on-1.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-on-2.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-on-3.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-on-4.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/pml-on-5.jpg
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+t = 2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Изменение электрического поля во времени (с PML).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EzPmlOn"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Перенос вычислительной нагрузки на графический процессор
+\end_layout
+
+\begin_layout Standard
+В целях увеличения производительности функции расчёта компонент векторов
+ электрической и магнитной напряжённости были изменены для исполнения на
+ графических процессорах.
+ Из двух технологий, позволяющих осуществить расчёт на GPU: NVIDIA CUDA
+ и OpenCL — была выбрана вторая, так как она поддерживает процессоры не
+ только производства компании NVIDIA, но и AMD.
+\end_layout
+
+\begin_layout Standard
+Для облегчения работы с фреймворком OpenCL была использована библиотека
+ EasyCL.
+ Код расчёта компонент вектора магнитной напряжённости приведён в приложении
+\begin_inset space ~
+\end_inset
+
+Б.
+ Зависимости среднего времени расчёта компонент векторов напряжённости в
+ конкретный момент времени во всех ячейках от размеров сетки представлены
+ на рис.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:1stComparsion"
+
+\end_inset
+
+ и
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2ndComparsion"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image12.png
+	lyxscale 50
+	width 95text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Зависимость среднего времени расчёта компонент вектора 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ в конкретный момент времени во всех ячейках от размеров сетки.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:1stComparsion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphics/image13.png
+	lyxscale 50
+	width 95text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Зависимость среднего времени расчёта компонент вектора 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ в конкретный момент времени во всех ячейках от размеров сетки.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:2ndComparsion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Заключение
+\end_layout
+
+\begin_layout Standard
+В рамках работы был создана программа для электродинамической симуляции
+ методом конечных разностей во временной области, способная эффективно использов
+ать ресурсы ГПУ.
+ При помощи неё было произведено тестовое моделирование распространения
+ гармонического сигнала, излучаемого тонким симметричным вибратором в замкнутом
+ счётном объёме как с граничными условиями идеального отражения, так и с
+ PML.
+ Также была разработана референсная ЦПУ-реализация и произведено сравнение
+ производительности расчётов с использованием ЦПУ и ГПУ.
+\end_layout
+
+\begin_layout Standard
+В ходе работы было выяснено, что использование графических процессоров обеспечив
+ает увеличение производительности до 17 раз, причём в программном коде не
+ был реализован выровненный доступ к памяти, что является перспективным
+ направлением разработки.
+ Также, в отличие от ЦПУ, производительность графических процессоров меньше
+ зависит от размеров счётного объёма.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Yee"
+
+\end_inset
+
+Yee,
+\begin_inset space ~
+\end_inset
+
+K.
+ Numerical solution of initial boundary value problems involving Maxwell’s
+ equations in isotropic media / K.
+\begin_inset space \thinspace{}
+\end_inset
+
+Yee // Antennas and Propagation, IEEE Transactions.
+ — 1966.
+ — Vol.
+\begin_inset space ~
+\end_inset
+
+14, no.
+\begin_inset space ~
+\end_inset
+
+3.
+ — P.
+\begin_inset space ~
+\end_inset
+
+302–307.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Schneider"
+
+\end_inset
+
+Schneider
+\begin_inset space ~
+\end_inset
+
+J.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ Understanding the Finite-Difference Time-Domain Method / J.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+\begin_inset space ~
+\end_inset
+
+Schneider.
+ //Understanding the FDTD Method : [сайт].
+ — URL: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.eecs.wsu.edu/~schneidj/ufdtd/
+\end_layout
+
+\end_inset
+
+ (дата обращения: 12.06.2017).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Berenger94"
+
+\end_inset
+
+Berenger
+\begin_inset space ~
+\end_inset
+
+J.\SpecialChar nobreakdash
+P.
+ A perfectly matched layer for the absorption of electromagnetic waves /
+ J.\SpecialChar nobreakdash
+P.
+\begin_inset space ~
+\end_inset
+
+Berenger //Journal of Computational Physics — 1994.
+ — No.
+\begin_inset space ~
+\end_inset
+
+2 — P.
+\begin_inset space ~
+\end_inset
+
+185–200.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Taflove2005"
+
+\end_inset
+
+Taflove
+\begin_inset space \thinspace{}
+\end_inset
+
+,A.
+ Computational Electrodynamics: The Finite-Difference Time-Domain Method
+ / A.
+\begin_inset space \thinspace{}
+\end_inset
+
+Taflove, S.
+\begin_inset space \thinspace{}
+\end_inset
+
+C.
+\begin_inset space \thinspace{}
+\end_inset
+
+Hagness.
+ — 3rd ed.
+ — ARTECH HOUSE, INC., 2005.
+ — 1037 p.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Berenger"
+
+\end_inset
+
+Berenger
+\begin_inset space ~
+\end_inset
+
+J.\SpecialChar nobreakdash
+P.
+ Improved PML for the FDTD solution of wave-structure interaction problems
+ / J.\SpecialChar nobreakdash
+P.
+\begin_inset space \thinspace{}
+\end_inset
+
+Berenger // IEEE Transactions on Antennas and Propagation — 1997.
+ — Vol.
+\begin_inset space ~
+\end_inset
+
+45 — P.
+\begin_inset space ~
+\end_inset
+
+466–473.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Makinen"
+
+\end_inset
+
+Makinen
+\begin_inset space ~
+\end_inset
+
+R.
+\begin_inset space \thinspace{}
+\end_inset
+
+M.
+ A stabilized resistive voltage source for FDTD thin-wire models / R.
+\begin_inset space \thinspace{}
+\end_inset
+
+M.
+\begin_inset space \thinspace{}
+\end_inset
+
+Makinen, M.
+\begin_inset space \thinspace{}
+\end_inset
+
+A.
+\begin_inset space \thinspace{}
+\end_inset
+
+Kivikovski // IEEE Transactions on Antennas and Propagation — 2003.
+ — Vol.
+\begin_inset space ~
+\end_inset
+
+51 — P.
+\begin_inset space ~
+\end_inset
+
+1615–1622.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Berillo"
+
+\end_inset
+
+Берилло
+\begin_inset space ~
+\end_inset
+
+А.
+ Nvidia CUDA — неграфические вычисления на графических процессорах / А.
+\begin_inset space \thinspace{}
+\end_inset
+
+Берилло // URL: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.ixbt.com/video3/cuda-1.shtml
+\end_layout
+
+\end_inset
+
+ (дата обращения: 12.06.2017).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Galoppo"
+
+\end_inset
+
+Galoppo
+\begin_inset space ~
+\end_inset
+
+N.
+ LU\SpecialChar nobreakdash
+GPU: Efficient algorithms for solving dense linear systems on graphics
+ hardware / N.
+\begin_inset space \thinspace{}
+\end_inset
+
+Galoppo [et
+\begin_inset space ~
+\end_inset
+
+al.] // Thirteenth International Symposium on Temporal Representation and
+ Reasoning, 2006.
+ — Seatle, WA, 2005.
+ — P.
+\begin_inset space ~
+\end_inset
+
+3–15.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "CUDADoc"
+
+\end_inset
+
+Programming Guide :: CUDA Toolkit Documentation : [сайт].
+ — URL: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
+\end_layout
+
+\end_inset
+
+ (дата обращения: 12.06.2017).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Frolov"
+
+\end_inset
+
+Фролов
+\begin_inset space ~
+\end_inset
+
+В.
+ Введение в технологию CUDA / В.
+\begin_inset space \thinspace{}
+\end_inset
+
+Фролов // Компьютерная графика и мультимедиа: электрон.
+\begin_inset space ~
+\end_inset
+
+журн.
+ — 2008.
+ — No.
+\begin_inset space ~
+\end_inset
+
+6 (Jan).
+ — URL: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.webcitation.org/65tg9Hcl3
+\end_layout
+
+\end_inset
+
+ (дата обращения: 15.06.2017).
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Код расчёта компоненты вектора 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ на ЦПУ
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    int nx = grid.Hx.getCountX();
+\end_layout
+
+\begin_layout Plain Layout
+
+    int ny = grid.Hx.getCountY();
+\end_layout
+
+\begin_layout Plain Layout
+
+    int nz = grid.Hx.getCountZ();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    float delta_x = grid.delta_x;
+\end_layout
+
+\begin_layout Plain Layout
+
+    float delta_y = grid.delta_y;
+\end_layout
+
+\begin_layout Plain Layout
+
+    float delta_z = grid.delta_z;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(int ix = 0; ix < nx-1; ix++)
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(int iy = 0; iy < ny-1; iy++)
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(int iz = 0; iz < nz-1; iz++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        float& curHx   = grid.Hx   .at(ix, iy,   iz);
+\end_layout
+
+\begin_layout Plain Layout
+
+        float  curD_Hx = grid.D_Hx .at(ix, iy,   iz);
+\end_layout
+
+\begin_layout Plain Layout
+
+        float  curEz1  = grid.Ez   .at(ix, iy+1, iz);
+\end_layout
+
+\begin_layout Plain Layout
+
+        float  curEz0  = grid.Ez   .at(ix, iy,   iz);
+\end_layout
+
+\begin_layout Plain Layout
+
+        float  curEy1  = grid.Ey   .at(ix, iy,   iz+1);
+\end_layout
+
+\begin_layout Plain Layout
+
+        float  curEy0  = grid.Ey   .at(ix, iy,   iz);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        curHx -= curD_Hx * ((curEz1 - curEz0) / delta_y -
+\end_layout
+
+\begin_layout Plain Layout
+
+                            (curEy1 - curEy0) / delta_z);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Код расчёта компоненты вектора 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ на ГПУ
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+__kernel void calcH(int nx, int ny, int nz,
+\end_layout
+
+\begin_layout Plain Layout
+
+                    float delta_x,
+\end_layout
+
+\begin_layout Plain Layout
+
+                    float delta_y,
+\end_layout
+
+\begin_layout Plain Layout
+
+                    float delta_z,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *Ex,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *Ey,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *Ez,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *Hx,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *Hy,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *Hz,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *D_Hx,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *D_Hy,
+\end_layout
+
+\begin_layout Plain Layout
+
+           __global float *D_Hz) {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    int ix = get_global_id(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+    int iy = get_global_id(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    int iz = get_global_id(2);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    int idx = ix * ny * nz + iy * nz + iz;
+\end_layout
+
+\begin_layout Plain Layout
+
+    int idx010 = ix * ny * nz + (iy + 1) * nz + iz;
+\end_layout
+
+\begin_layout Plain Layout
+
+    int idx001 = ix * ny * nz + iy * nz + (iz + 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    int idx100 = (ix + 1) * ny * nz + iy * nz + iz;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    Hx[idx] -= D_Hx[idx]*((Ez[idx010] - Ez[idx]) / delta_y -
+\end_layout
+
+\begin_layout Plain Layout
+
+                          (Ey[idx001] - Ey[idx]) / delta_z);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    Hy[idx] -= D_Hy[idx]*((Ex[idx001] - Ex[idx]) / delta_z -
+\end_layout
+
+\begin_layout Plain Layout
+
+                          (Ez[idx100] - Ez[idx]) / delta_x);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    Hz[idx] -= D_Hz[idx]*((Ey[idx100] - Ey[idx]) / delta_x -
+\end_layout
+
+\begin_layout Plain Layout
+
+                          (Ex[idx010] - Ex[idx]) / delta_y);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
